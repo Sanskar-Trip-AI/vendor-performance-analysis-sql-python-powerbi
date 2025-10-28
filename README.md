@@ -109,9 +109,10 @@ Key cleaning and transformation steps:
 **Sanskar Tripathi**  
 _Data Analysis | SQL · Python · Power BI · Machine Learning_  
 
-📧 **Email:** [sanskar.trip.ai@gmail.com]  
-🔗 **LinkedIn:** [linkedin.com/in/sanskartripathi]  
-🔗 **Github:** [https://github.com/Sanskar-Trip-AI]  
+
+Email: [sanskar.trip.ai@gmail.com](mailto:sanskar.trip.ai@gmail.com)  
+GitHub: [https://github.com/Sanskar-Trip-AI](https://github.com/Sanskar-Trip-AI)  
+LinkedIn: [linkedin.com/in/sanskartripathi](https://www.linkedin.com/in/sanskartripathi)
 
 ---
 
