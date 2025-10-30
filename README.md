@@ -1,7 +1,6 @@
 # 📦 Vendor Performance & Inventory Analysis | SQL · Python · Power BI  
 
-Vendor Performance Analysis focuses on evaluating supplier efficiency across metrics like sales, profit, delivery reliability, and inventory impact.  
-The goal is to identify top-performing vendors, cost-saving opportunities, and inefficiencies in inventory and procurement.
+Vendor Performance Analysis focuses on evaluating supplier efficiency across metrics like sales, profit, delivery reliability, and inventory impact. The goal is to identify top-performing vendors, cost-saving opportunities, and inefficiencies in inventory and procurement.
 
 ---
 
