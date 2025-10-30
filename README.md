@@ -60,7 +60,8 @@ Approx. **25K+ records**, covering:
 ---
 
 ## 🧱 Project Structure
-```Vendor_Performance_Analysis/
+```
+Vendor_Performance_Analysis/
 │
 ├── data/
 │ └── inventory.db
@@ -72,7 +73,8 @@ Approx. **25K+ records**, covering:
 │ └── vendor_performance_dashboard.pbix
 ├── report/
 │ └── final_report.pdf
-└── README.md```
+└── README.md
+```
 
 ---
 
