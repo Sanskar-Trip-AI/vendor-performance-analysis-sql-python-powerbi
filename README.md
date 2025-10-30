@@ -1,107 +1,132 @@
 # 📦 Vendor Performance & Inventory Analysis | SQL · Python · Power BI  
 
-Analyzing vendor efficiency and profitability to support strategic purchasing and inventory decisions using **SQL**, **Python**, and **Power BI**.
+Vendor Performance Analysis focuses on evaluating supplier efficiency across metrics like sales, profit, delivery reliability, and inventory impact.  
+The goal is to identify top-performing vendors, cost-saving opportunities, and inefficiencies in inventory and procurement.
 
 ---
 
-## 📌 Table of Contents  
-- [Overview](#overview)  
-- [Business Problem](#business-problem)  
-- [Dataset](#dataset)  
-- [Tools & Technologies](#tools--technologies)  
-- [Data Preparation & Analysis](#data-preparation--analysis)  
-- [Key Insights & Findings](#key-insights--findings)  
-- [Dashboard](#dashboard)  
-- [Final Recommendations](#final-recommendations)  
-- [Author & Contact](#author--contact)  
+## 📘 Table of Contents
+- [Overview](#-vendor-performance-analysis)
+- [Business Problem](#-business-problem)
+- [Dataset](#️-dataset)
+- [Tools & Technologies](#-tools--technologies)
+- [Project Structure](#-project-structure)
+- [Data Preparation](#-data-preparation)
+- [Key Insights & Findings](#-key-insights--findings)
+- [Dashboard](#-dashboard)
+- [Final Recommendations](#-final-recommendations)
+- [Author & Contact](#-author--contact)
 
 ---
 
-## 🧭 Overview  
-This project evaluates **vendor performance and retail inventory dynamics** to drive strategic insights for purchasing, pricing, and inventory optimization.  
+## 🧩 Business Problem
 
-A complete data pipeline was built using:  
-- **SQL** for data extraction, cleaning, and transformation  
-- **Python** for analysis and statistical validation  
-- **Power BI** for interactive dashboards and storytelling  
+Companies often suffer losses due to inefficient vendor management, high freight costs, or poor inventory turnover.  
+This project addresses:
 
----
-
-## 🎯 Business Problem  
-Efficient vendor and inventory management are crucial for retail success.  
-This project aims to:  
-- Identify underperforming vendors or brands needing pricing or promotional adjustments  
-- Assess vendor contributions to overall sales and profits  
-- Analyze bulk purchasing cost-benefits  
-- Detect inventory turnover inefficiencies  
-- Statistically compare vendor-level profitability  
+- Identifying underperforming vendors for corrective actions  
+- Analyzing top contributors to sales and profit  
+- Understanding the effect of bulk orders on cost savings  
+- Detecting slow-moving or unsold inventory  
+- Assessing dependency risks on key vendors  
 
 ---
 
-## 🧾 Dataset  
-- Multiple CSV files (`/data/` folder) covering **sales**, **vendors**, and **inventory**  
-- Combined and transformed into vendor-level summary tables for analysis  
-- Approximate size: *~30K–40K records, 20+ attributes*  
+## 🗂️ Dataset
+
+**Data Source:** `inventory.db` (SQLite database)  
+Contains tables for purchases, sales, freight, and vendor details.
+
+Approx. **25K+ records**, covering:
+- Vendor information  
+- Sales & purchase transactions  
+- Freight and excise data  
+- Pricing and volume metrics  
+
+📁 **Access Data:** [Google Drive Link](https://drive.google.com/file/d/1OycGXzQfY5aKn1kbR07l_Qw7pQ_hlrkp/view?usp=sharing)
 
 ---
 
-## 🛠 Tools & Technologies  
-- **SQL** → Joins, Filtering, CTEs for data transformation  
-- **Python** → *Pandas, Matplotlib, Seaborn, SciPy* for analysis and validation  
-- **Power BI** → Interactive dashboard visualization  
-- **GitHub** → Version control and project hosting  
+## 🧰 Tools & Technologies
+
+| Tool | Purpose |
+|------|----------|
+| **Python** | Data analysis & scripting |
+| **Pandas** | Data manipulation |
+| **SQL** | Data extraction & aggregation |
+| **Power BI** | Dashboard visualization |
+| **Matplotlib / Seaborn** | Exploratory data visualization |
+| **Jupyter Notebook** | Data exploration and analysis |
 
 ---
 
-## 🔍 Data Preparation & Analysis  
-Key cleaning and transformation steps:  
-- Removed invalid records (Gross Profit ≤ 0, Profit Margin ≤ 0, Sales Quantity = 0)  
-- Created vendor-level summary tables and lookup merges  
-- Detected and handled outliers (high freight costs, large purchase amounts)  
-- Performed correlation and distribution analysis for deeper insights  
+## 🧱 Project Structure
+Vendor_Performance_Analysis/
+│
+├── data/
+│ └── inventory.db
+├── sql/
+│ └── final_query.sql
+├── notebooks/
+│ └── Vendor_Performance_Analysis.ipynb
+├── powerbi/
+│ └── vendor_performance_dashboard.pbix
+├── report/
+│ └── final_report.pdf
+└── README.md
 
 ---
 
-## 📊 Key Insights & Findings  
-**Data Quality Observations**  
-- Loss-making transactions found (Gross Profit: min −52,002.78)  
-- Unsold inventory → slow-moving stock alerts  
+## 🔍 Data Preparation
 
-**Outliers**  
-- High freight costs (up to ₹2.57L)  
-- Large deviations in purchase prices  
+- Connected to SQLite database via **SQLAlchemy**  
+- Cleaned missing values and removed zero/negative profit entries  
+- Merged purchase, sales, and freight data using **SQL CTEs**  
+- Aggregated brand- and vendor-level performance metrics  
 
-**Correlations**  
-- Purchase Qty ↔ Sales Qty → **Strong Positive (0.999)**  
+---
+
+## 📊 Key Insights & Findings
+
+### Data Highlights
+- Negative/zero profit entries identified and excluded  
+- Unsold inventory → slow-moving SKUs detected  
+- High freight outliers up to ₹2.57L  
+
+### Correlation
+- Purchase Qty ↔ Sales Qty → **Strong (0.999)**  
 - Profit Margin ↔ Sales Price → **Weak Negative (−0.179)**  
 
-**Business Insights**  
-- 🔹 *198 brands* with low sales but high margins — ideal for promotions  
-- 🔹 *Top 10 vendors* = **65.69%** of all purchases → over-reliance risk  
-- 🔹 *72% cost savings* per unit in bulk purchases  
-- 🔹 *$2.71M* worth of unsold inventory identified  
-- 🔹 Profitability difference between high vs. low-performing vendors is **statistically significant**  
+### Business Insights
+- 🔹 198 brands with low sales but high margins → target for promotions  
+- 🔹 Top 10 vendors account for **65.7%** of purchases → dependency risk  
+- 🔹 **72% unit cost savings** via bulk purchasing  
+- 🔹 **$2.71M unsold stock** → inventory lockup  
+- 🔹 Significant margin gap between top and bottom vendors  
 
 ---
 
-## 📈 Dashboard  
-**Power BI Dashboard Highlights:**  
-- Vendor-wise Sales & Profitability  
-- Inventory Turnover and Bulk Purchase Analysis  
-- Profit Margin Trends  
-- Vendor Performance Heatmaps  
+## 📈 Dashboard
 
-📊 **Dashboard File:**  
-[`vendor_performance_dashboard.pbix`](./dashboard/vendor_performance_dashboard.pbix)  
+### Power BI Dashboard Features
+- Vendor-wise Sales, Profit, and Margin metrics  
+- Inventory Turnover & Bulk Purchase analysis  
+- Profit Margin Heatmaps & KPI Cards  
+- Vendor Comparison & Trend Analysis  
+
+📁 **File:** `powerbi/vendor_performance_dashboard.pbix`  
+📸 *(Add dashboard preview image here once uploaded)*
 
 ---
 
-## 💡 Final Recommendations  
-✅ Diversify vendor base to mitigate over-reliance  
-✅ Optimize bulk order sizes for cost efficiency  
-✅ Reprice or promote slow-moving high-margin products  
-✅ Clear stagnant inventory strategically  
-✅ Strengthen vendor relationship programs based on performance metrics  
+## 💡 Final Recommendations
+
+✅ Diversify vendor base to reduce over-reliance  
+✅ Optimize bulk orders for cost efficiency  
+✅ Promote slow-moving, high-margin products  
+✅ Implement vendor scorecards for continuous monitoring  
+✅ Leverage data insights for better contract negotiations  
+
 
 ---
 
