@@ -42,8 +42,6 @@ Approx. **25K+ records**, covering:
 - Freight and excise data  
 - Pricing and volume metrics  
 
-📁 **Access Data:** [Google Drive Link](https://drive.google.com/file/d/1OycGXzQfY5aKn1kbR07l_Qw7pQ_hlrkp/view?usp=sharing)
-
 ---
 
 ## 🧰 Tools & Technologies
@@ -115,8 +113,10 @@ Vendor_Performance_Analysis/
 - Profit Margin Heatmaps & KPI Cards  
 - Vendor Comparison & Trend Analysis  
 
-📁 **File:** `powerbi/vendor_performance_dashboard.pbix`  
-📸 *(Add dashboard preview image here once uploaded)*
+📁 **File:** `Dashboard/vendor_performance.pbix`
+
+📸 **Dashboard Preview**
+![Dashboard Preview](Dashboard/Dashboard-Image.png)
 
 ---
 
